@@ -6,19 +6,22 @@ window.onload = function () {
 	var showAttempts=document.getElementById("attempts");
 	var showHint=document.getElementById("hint");
 	var showClue=document.getElementById("clue");
+	var showWrong = document.getElementById('usedKeys');
 
 	result = function () {
     	wordHolder = document.getElementById('showWord');
     	correct = document.createElement('ul');
+    	
 
     	for (var i = 0; i < wordChoosen.length; i++) {
     		correct.setAttribute('id', 'my-word');
       		letterGuess = document.createElement('li');
         	letterGuess.innerHTML = "_";
-        	
+
       		letterUsed.push(letterGuess);
       		wordHolder.appendChild(correct);
       		correct.appendChild(letterGuess);
+
     	}
 	}
 	
@@ -53,6 +56,9 @@ window.onload = function () {
       		var j = (wordChoosen.indexOf(guess));
       		if (j === -1) {
         		attempts -=1;
+        		wrongLetter.push(" " + guess);
+        		console.log(wrongLetter);
+        		showWrong.innerHTML=wrongLetter;
         		comments();
       			} else {
         		comments();
@@ -68,7 +74,8 @@ window.onload = function () {
 	console.log(wordChoosen);
 	check();
 	letterUsed=[];
-	attempts=5;
+	wrongLetter=[];
+	attempts=7;
 	counter=0;
 	result();
 	comments();
@@ -85,6 +92,7 @@ window.onload = function () {
 	reset.onclick=function(){
 		correct.parentNode.removeChild(correct);
     	showClue.innerHTML = "";
+    	showWrong.innerHTML="";
 		start();
 	}
 }
