@@ -5,14 +5,16 @@
 /*Jumbotron style*/
 .jumbotronhalf{
 	padding: 24px 60px;
-	background-image: url(../images/pokemon.jpg);
+	background-image: url(../images/pokemon-banner.jpg);
 	background-size: 100% 100%;
 }
 #hangmanPokemon{
 	color: #fecb2f;
+  font-weight: bolder;
 }
 p{
-  color: black;
+  color: white;
+  font-weight: bold;
 }
 
 /*Panels*/
