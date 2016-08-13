@@ -1,3 +1,7 @@
+/*navbar*/
+.pokemonnav{
+  background-color: #fecb2f;
+}
 /*Jumbotron style*/
 .jumbotronhalf{
 	padding: 24px 60px;
@@ -7,16 +11,34 @@
 #hangmanPokemon{
 	color: #fecb2f;
 }
+p{
+  color: black;
+}
 
-
+/*Panels*/
 .colmar{
-	padding: 0;
+  padding: 0;
+}
+
+/*Hint panel*/
+#clue{
+  margin-bottom: 0;
+}
+.pokemonimg{
+  margin: 10px 20px 10px 100px;
+  height: 150px;
+  width: 150px;
+}
+#hintbuttons{
+  margin-left: 100px;
 }
 .whois{
 	background-image: url(../images/whospokemon.png);
 	background-size: 100% 100%;
 	height: 250px;
 }
+
+/*Panel Current Word*/
 .player{
 	height: 250px;
 }
@@ -26,8 +48,18 @@
   padding: 0;
   display:block;
 }
-
 #my-word li {
+  position: relative;
+  list-style: none;
+  margin: 0;
+  display: inline-block;
+  padding: 0 10px;
+  font-size:1.6em;
+}
+#showWord, #usedKeys, #attempts{
+  text-align: center;
+}
+#wrongs{
   position: relative;
   list-style: none;
   margin: 0;
